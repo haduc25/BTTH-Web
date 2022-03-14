@@ -10,23 +10,30 @@
         <div class="container">
                 <h1>Thêm sản phẩm </h1>
                 <form action="insert" method="POST" enctype="multipart/form-data">
-                    <label for="">Mã sản phẩm</label>
-                    <input type="text" name="masp"><br>
+                    <div class="txt" style="display: none">
+                        <label for="">Mã sản phẩm</label>
+                        <input type="text" name="masp"><br>
+
+                    </div>
+
 
                     <label for="">Tên sản phẩm</label>
                     <input type="text" name="tensp"><br>
 
-                    <label for="">Nhà sản xuất</label>
-                    <input type="text" list="browsers" name="manhasx"/><br>
-                    <datalist id="browsers">
-                        <option>Google</option>
-                        <option>Apple</option>
-                        <option>Samsung</option>
-                        <option>LG</option>
-                    </datalist>
+                    <label for="nhasx">Nhà sản xuất</label>
+                    <select name="manhasx" id="nhasx">
+                        <option value="Google">Google</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="LG">LG</option>
+                    </select>
+                    <br>
 
-                    <label for="">Hình ảnh</label>
-                    <input type="file" name="hinhanh">
+                    <label for="">Số lượng </label>
+                    <input type="number" name="soluong" min="1" value="1"><br>
+
+                    <label for="">Đơn giá </label>
+                    <input type="number" name="dongia" min="1" value="1"><span style="font-weight: bold">VND</span><br>
 
                     <br>
                     <br>

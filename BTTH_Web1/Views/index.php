@@ -19,7 +19,9 @@
                                 <th>STT</th>
                                 <th>Tên sản phẩm</th>
                                 <th>Nhà sản xuất</th>
-                                <th>hình ảnh</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Thành tiền</th>
                                 <td>
                                     <a href="./products/create">Insert</a>
                                 </td>
@@ -30,12 +32,16 @@
                             <?php
                                 $stt = 1;
                                 foreach ($products as $product)
-                                {?>
+                                {
+                                    $total = ($product->dongia *  $product->soluong);
+                                ?>
                                 <tr>
                                     <td><?= $stt ?></td>
                                     <td><?=$product->ten_sp ?></td>
                                     <td><?=$product->ma_nhasx ?></td>
-                                    <td><img src="<?=$product->hinhanh ?>" alt="<?=$product->ten_sp ?>" width='80'></td>
+                                    <td><?=$product->soluong ?></td>
+                                    <td><?=$product->dongia ?></td>
+                                    <td><?=$total ?></td>
                                     <td>
                                         <a href="#">Edit</a>
                                         <a href="#">Del</a>

@@ -15,35 +15,21 @@ class ProductsController
         $_masp = $_POST['masp'];
         $_tensp = $_POST['tensp'];
         $_manhasx = $_POST['manhasx'];
-        $_hinhanh = $_FILES['hinhanh'];
+        $_soluong = $_POST['soluong'];
+        $_dongia = $_POST['dongia'];
 
-        $fileName = $_hinhanh['name'];
         $products = new Products();
         $products->ma_sp = $_masp;
         $products->ten_sp = $_tensp;
         $products->ma_nhasx = $_manhasx;
+        $products->soluong = $_soluong;
+        $products->dongia = $_dongia;
 
+        // var_dump()
 
-        $fileName = null;
-        if($_hinhanh['size'] > 0){
-            $fileName = 'upload/' . time()."-".$_hinhanh['name'];;
-        }
-
-		if(move_uploaded_file($_hinhanh['tmp_name'], $fileName))
-		{
-			//have image
-			// $sql.=" ,avatar=:avatar";
-		}else
-		{
-			//no image
-			$fileName = null;
-		}
-
-        $products->hinhanh = $fileName;
         $products->insert();
 
-        echo "done";
-
+        header("Location: ../index.php");
 
     }
 }

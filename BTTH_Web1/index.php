@@ -21,7 +21,6 @@
         case 'products/insert':
             $ctl = new ProductsController();
             $ctl->insert();
-
             break;
 
 
