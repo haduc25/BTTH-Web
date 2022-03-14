@@ -33,7 +33,7 @@
                     <input type="number" name="soluong" min="1" value="1"><br>
 
                     <label for="">Đơn giá </label>
-                    <input type="number" name="dongia" min="1" value="1"><span style="font-weight: bold">VND</span><br>
+                    <input type="number" name="dongia" min="1000" value="1000"><span style="font-weight: bold">VND</span><br>
 
                     <br>
                     <br>

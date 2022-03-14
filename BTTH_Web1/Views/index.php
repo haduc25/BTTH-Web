@@ -5,6 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index of Views</title>
+    <style>
+
+            .container{
+                background: #00CED1;
+                width: 700px;
+                color: white;
+                margin:auto;
+
+            }
+            h1{
+                text-align: center;
+            }
+            table,tr,td,th{
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 20px;
+            }
+            table{
+                margin: auto;
+            }
+            .nut{
+                background: red;
+                border-radius: 5px;
+                padding: 5px;
+                text-decoration: none;
+            }
+    </style>
 </head>
 <body>
         <div class="container">
