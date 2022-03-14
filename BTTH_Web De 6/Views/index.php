@@ -6,31 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index of Views</title>
     <style>
-
             .container{
-                background: #00CED1;
+                background: #ddd;
                 width: 700px;
-                color: white;
+                color: #000;
                 margin:auto;
-
             }
             h1{
                 text-align: center;
             }
+
+            a
+            {
+                text-decoration: none;
+                color: #000;
+            }
+
+            a:hover
+            {
+                text-decoration: underline;
+                background: red;
+            }
+
+            a:hover
+            {
+
+            }
+
             table,tr,td,th{
                 border: 1px solid black;
                 border-collapse: collapse;
-                padding: 20px;
+                padding: 10px;
+                padding-bottom: 15px;
             }
             table{
                 margin: auto;
             }
-            .nut{
-                background: red;
-                border-radius: 5px;
-                padding: 5px;
-                text-decoration: none;
+
+            .tinh_nang
+            {
+                font-weight: bold;
+                padding-left: 10px;
+                padding-right: 10px;
             }
+
     </style>
 </head>
 <body>
@@ -49,8 +68,8 @@
                                 <th>Số lượng</th>
                                 <th>Đơn giá</th>
                                 <th>Thành tiền</th>
-                                <td>
-                                    <a href="./products/create">Insert</a>
+                                <td class="btn">
+                                    <a href="./products/create" class="tinh_nang">Insert</a>
                                 </td>
                             </tr>
                         </thead>
@@ -60,17 +79,17 @@
                                 $stt = 1;
                                 foreach ($products as $product)
                                 {
-                                    $total = ($product->dongia *  $product->soluong);
+                                    $total = ($product->dongia * $product->soluong);
                                 ?>
                                 <tr>
                                     <td><?= $stt ?></td>
                                     <td><?=$product->ten_sp ?></td>
                                     <td><?=$product->ma_nhasx ?></td>
                                     <td><?=$product->soluong ?></td>
-                                    <td><?=$product->dongia ?></td>
-                                    <td><?=$total ?></td>
-                                    <td>
-                                        <a href="#">Edit</a>
+                                    <td><?= number_format($product->dongia, 0, ",", ",")  ?></td>
+                                    <td><?= number_format($total, 0, ",", ",") ?></td>
+                                    <td class="tinh_nang">
+                                        <a href="#">Edit</a> |
                                         <a href="#">Del</a>
                                     </td>
                                 </tr>

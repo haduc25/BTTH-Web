@@ -23,13 +23,6 @@
             $ctl->insert();
             break;
 
-
-
-
-
-
-
-
         default:
             require_once 'Views/page_404/index.html';
             break;
